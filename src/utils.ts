@@ -22,7 +22,7 @@ export const isRegExp = partial(isType, ['RegExp']);
 export const isError = partial(isType, ['Error']);
 
 // Remove keys with null value from the given object
-Filter compact = reject(isNil);
+const compact = reject(isNil);
 
 const isNotNil = compose(
   not,
