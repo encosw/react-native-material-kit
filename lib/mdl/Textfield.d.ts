@@ -5,10 +5,10 @@
  *
  * Created by ywu on 15/8/3.
  */
-import { Component } from 'react';
-import { StyleProp, TextInputProps, TextStyle } from 'react-native';
-import { FloatingLabelPublicProps } from '../internal/textfield/FloatingLabel';
-import { UnderlinePublicProps } from '../internal/textfield/Underline';
+import { Component } from "react";
+import { StyleProp, TextInputProps, TextStyle } from "react-native";
+import { FloatingLabelPublicProps } from "../internal/textfield/FloatingLabel";
+import { UnderlinePublicProps } from "../internal/textfield/Underline";
 /** Props of the {@link Textfield} component */
 export interface TextfieldProps extends TextInputProps, FloatingLabelPublicProps, UnderlinePublicProps {
     /** alias to `onChangeText` */
@@ -49,6 +49,10 @@ export default class Textfield extends Component<TextfieldProps, TextfieldState>
     private set bufferedValue(value);
     private get bufferedValue();
     private set placeholder(value);
+    /**
+     * Sets native props for TextInput
+     */
+    setNativeProps(nativeProps: Object): void;
     /**
      * Requests focus for the given input or view. The exact behavior triggered
      * will depend on the platform and type of view.
